@@ -6,6 +6,9 @@
 # File name: customize.sh
 # Description: OpenWrt DIY script part 2 (After Update config)
 
+# 删除默认argon主题
+rm -rf package/lean/luci-theme-argon
+
 # 下载其它插件
 git clone https://github.com/jerrykuku/lua-maxminddb.git package
 git clone https://github.com/jerrykuku/luci-app-vssr.git package
