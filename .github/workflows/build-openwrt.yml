@@ -153,6 +153,6 @@ jobs:
     - name: 微信通知编译结果
       if: env.SCKEY
       run: |
-        [ ${{ steps.organize.outputs.status }} == 'success' ] && curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=🎉OpenWrt_${{ env.DEVICE_NAME }}编译完成😋|| curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=❌OpenWrt_${{ env.DEVICE_NAME }}编译失败😂
+        [ ${{ steps.organize.outputs.status }} == 'success' ] && curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=🎉OpenWrt${{ env.DEVICE_NAME }}编译完成😋|| curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=❌OpenWrt_${{ env.DEVICE_NAME }}编译失败😂
         
         
