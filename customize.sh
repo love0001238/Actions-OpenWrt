@@ -3,7 +3,7 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# File name: diy-part2.sh
+# File name: customize.sh
 # Description: OpenWrt DIY script part 2 (After Update config)
 
 # git clone package
