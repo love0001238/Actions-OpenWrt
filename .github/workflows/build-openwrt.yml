@@ -25,8 +25,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
-  DIY_P1_SH: DIY-FEEDS.sh
-  DIY_P2_SH: DIY-CONFIG.sh
+  DIY_P1_SH: feeds-customize.sh
+  DIY_P2_SH: customize.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
