@@ -6,6 +6,15 @@
 # File name: customize.sh
 # Description: OpenWrt DIY script part 2 (After Update config)
 
+# 固件硬改设置 
+#-------------------------------------------#
+# reg = <0x50000 0x7b0000>;  // 8MB  FLASH  #
+# reg = <0x50000 0xfb0000>;  // 16MB FLASH  #
+# reg = <0x50000 0x1fb0000>; // 32MB FLASH  #
+#-------------------------------------------#
+
+sed -i 's/<0x50000 0x7b0000>/<0x50000 0x1fb0000>/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218.dtsi
+
 # 删除默认argon主题
 rm -rf package/lean/luci-theme-argon
 
