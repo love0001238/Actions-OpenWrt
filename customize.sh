@@ -10,10 +10,9 @@
 rm -rf package/lean/luci-theme-argon
 
 # 下载其它插件
-mkdir package/ooooo
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/ooooo
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/ooooo
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/ooooo
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # 修改默认LAN地址
 sed -i 's/192.168.1.1/192.168.8.8/g' package/base-files/files/bin/config_generate
