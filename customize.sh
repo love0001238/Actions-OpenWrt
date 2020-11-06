@@ -14,15 +14,15 @@
 #-------------------------------------------#         #--------------------------------#
 
 # K2硬改配置
-sed -i 's/<0x50000 0x7b0000>/<0x50000 0x1fb0000>/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218.dtsi
-sed -i '/phicomm_psg1218a/{n;n;s/7872k/32448k/;}' target/linux/ramips/image/mt7620.mk
+#sed -i 's/<0x50000 0x7b0000>/<0x50000 0x1fb0000>/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218.dtsi
+#sed -i '/phicomm_psg1218a/{n;n;s/7872k/32448k/;}' target/linux/ramips/image/mt7620.mk
 
 # 删除默认argon主题
 rm -rf package/lean/luci-theme-argon
 
 # 下载其它插件
-#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-#git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # 修改默认LAN地址
