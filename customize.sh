@@ -13,9 +13,10 @@
 # reg = <0x50000 0x1fb0000>; // 32MB FLASH  #         #  IMAGE_SIZE := 32448k  // 32M  #
 #-------------------------------------------#         #--------------------------------#
 
-# K2硬改配置
+# 硬改配置
 #sed -i 's/<0x50000 0x7b0000>/<0x50000 0x1fb0000>/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218.dtsi
 #sed -i '/phicomm_psg1218a/{n;n;s/7872k/32448k/;}' target/linux/ramips/image/mt7620.mk
+sed -i '/tl-wr740n-v4/{n;n;s/tplink-4mlzma/tplink-16mlzma/;}' target/linux/ar71xx/image/tiny-tp-link.mk
 
 # 删除默认argon主题
 rm -rf package/lean/luci-theme-argon
