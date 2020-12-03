@@ -26,7 +26,7 @@ rm -rf package/lean/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # 修改默认名称
-sed -i "s/hostname='OpenWRT'/hostname='LEDE'/g" package/base-files/files/bin/config_generate
+sed -i "s/hostname='OpenWrt'/hostname='TP-LINK'/g" package/base-files/files/bin/config_generate
 # 修改默认LAN地址
 sed -i 's/192.168.1.1/192.168.3.8/g' package/base-files/files/bin/config_generate
 # 修改默认SSID
