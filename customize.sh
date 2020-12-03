@@ -21,10 +21,12 @@
 rm -rf package/lean/luci-theme-argon
 
 # 下载其它插件
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+#git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
+# 修改默认名称
+sed -i "s/hostname='OpenWRT'/hostname='LEDE'/g" package/base-files/files/bin/config_generate
 # 修改默认LAN地址
 sed -i 's/192.168.1.1/192.168.3.8/g' package/base-files/files/bin/config_generate
 # 修改默认SSID
