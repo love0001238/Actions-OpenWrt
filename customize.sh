@@ -19,7 +19,7 @@
 sed -i '/tl-wr740n-v4/{n;s/tplink-4mlzma/tplink-16mlzma/;}' target/linux/ar71xx/image/tiny-tp-link.mk
 
 # 删除默认argon主题
-rm -rf package/lean/luci-theme-argon
+#rm -rf package/lean/luci-theme-argon
 
 # 下载其它插件
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
@@ -41,4 +41,4 @@ sed -i 's/ssid=OpenWrt/ssid=OOO/g' package/kernel/mac80211/files/lib/wifi/mac802
 sed -i 's/W I R E L E S S   F R E E D O M/ SET-SAIL     TEL:15095660155/g' package/base-files/files/etc/banner
 
 # 删除默认密码
-sed -i '/root::0:0/d' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/root::0:0/d' package/lean/default-settings/files/zzz-default-settings
