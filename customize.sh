@@ -34,8 +34,8 @@ sed -i 's/192.168.1.1/192.168.3.8/g' package/base-files/files/bin/config_generat
 sed -i 's/ssid=OpenWrt/ssid=OOO/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改固件信息
-sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='Set-saiL '/g" package/lean/default-settings/files/zzz-default-settings
-sed -i "s/DISTRIB_REVISION='R20.10.20'/DISTRIB_REVISION='TEL:15095660155'/g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='Set-saiL '/g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/DISTRIB_REVISION='R20.10.20'/DISTRIB_REVISION='TEL:15095660155'/g" package/lean/default-settings/files/zzz-default-settings
 
 # 修改SSH登录信息
 sed -i 's/W I R E L E S S   F R E E D O M/ SET-SAIL     TEL:15095660155/g' package/base-files/files/etc/banner
