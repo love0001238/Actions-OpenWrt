@@ -27,7 +27,7 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: feeds-customize.sh
   DIY_P2_SH: customize.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -86,8 +86,11 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH 连接到 Actions
-      uses: love0001238/debugger-action@main
+      uses: love0001238/ssh2actions@v1.0.0
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
     - name: 下载编译包文件
       id: package
