@@ -29,7 +29,7 @@ rm -rf package/lean/luci-theme-argon
 # 修改默认名称
 sed -i "s/hostname='OpenWrt'/hostname='Set-saiL'/g" package/base-files/files/bin/config_generate
 # 修改默认LAN地址
-sed -i 's/192.168.1.1/192.168.3.8/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.0.8/g' package/base-files/files/bin/config_generate
 # 修改默认SSID
 sed -i 's/ssid=OpenWrt/ssid=OOO/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
